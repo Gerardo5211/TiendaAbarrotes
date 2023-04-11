@@ -8,6 +8,7 @@ package pckgWEB;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import pgkModelo.MDB;
 
 /**
  *
@@ -34,7 +35,14 @@ public class WSBD {
     @WebMethod(operationName = "Altas")
     public String Altas(@WebParam(name = "tabla") final String tabla, @WebParam(name = "datos") final String datos) {
         //TODO write your implementation code here:
-        return null;
+        
+        
+        MDB administradorBD = new MDB();
+        String leyenda;
+        leyenda = administradorBD.registrarAlta(tabla, datos);
+        
+        return  leyenda;
+        
     }
 
     /**

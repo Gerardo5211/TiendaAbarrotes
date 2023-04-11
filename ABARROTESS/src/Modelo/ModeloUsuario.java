@@ -7,8 +7,8 @@
 package Modelo;
 
 
-import pkgws.WSBD;
-import pkgws.WSBD_Service;
+import pckgweb.WSBD;
+import pckgweb.WSBD_Service;
 
 /**
  *
@@ -36,7 +36,7 @@ public class ModeloUsuario {
     
      public String modificar (String tabla , String datos, String condicion){
         
-        leyenda=obj2.modificar(tabla, datos,condicion);
+       // leyenda=obj2.modificar(tabla, datos,condicion);
         return leyenda;
     } 
      

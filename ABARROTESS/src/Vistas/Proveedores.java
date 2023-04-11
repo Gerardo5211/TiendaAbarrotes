@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Vistas;
-package 
+package  pgkModelo Conexion;
 
 /**
  *
