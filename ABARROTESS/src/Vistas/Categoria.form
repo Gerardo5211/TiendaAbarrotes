@@ -44,7 +44,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txtidcategoria" pref="119" max="32767" attributes="0"/>
                           <Component id="txtnombrecategoria" pref="119" max="32767" attributes="0"/>
-                          <Component id="txtdescripcioncategoria" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtdescripcioncategroiaa" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -101,7 +101,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtdescripcioncategoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtdescripcioncategroiaa" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="183" max="-2" attributes="0"/>
@@ -219,7 +219,7 @@
         <Property name="text" type="java.lang.String" value="Descripcion"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtdescripcioncategoria">
+    <Component class="javax.swing.JTextField" name="txtdescripcioncategroiaa">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>

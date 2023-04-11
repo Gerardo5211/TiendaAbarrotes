@@ -41,7 +41,7 @@ public class Categoria extends javax.swing.JFrame {
         btnconsultarcategoria = new javax.swing.JButton();
         btneliminarcategoria = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        txtdescripcioncategoria = new javax.swing.JTextField();
+        txtdescripcioncategroiaa = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,7 +106,7 @@ public class Categoria extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtidcategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
                             .addComponent(txtnombrecategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
-                            .addComponent(txtdescripcioncategoria))))
+                            .addComponent(txtdescripcioncategroiaa))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btneliminarcategoria)
                 .addGap(41, 41, 41))
@@ -148,7 +148,7 @@ public class Categoria extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtdescripcioncategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtdescripcioncategroiaa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
@@ -211,7 +211,7 @@ public class Categoria extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    public javax.swing.JTextField txtdescripcioncategoria;
+    public javax.swing.JTextField txtdescripcioncategroiaa;
     public javax.swing.JTextField txtidcategoria;
     public javax.swing.JTextField txtnombrecategoria;
     // End of variables declaration//GEN-END:variables
