@@ -24,11 +24,15 @@ public class WSBD {
         return "Hello " + txt + " !";
     }
 
+
+
+
+
     /**
      * Web service operation
      */
     @WebMethod(operationName = "Altas")
-    public String Altas(@WebParam(name = "id_proveedor") String id_proveedor, @WebParam(name = "nombre") String nombre, @WebParam(name = "direccion") String direccion, @WebParam(name = "gmail") String gmail, @WebParam(name = "telefono") String telefono) {
+    public String Altas(@WebParam(name = "tabla") final String tabla, @WebParam(name = "datos") final String datos) {
         //TODO write your implementation code here:
         return null;
     }
@@ -36,8 +40,8 @@ public class WSBD {
     /**
      * Web service operation
      */
-    @WebMethod(operationName = "Eliminar")
-    public String Eliminar(@WebParam(name = "id_proveedor") String id_proveedor, @WebParam(name = "nombre") String nombre, @WebParam(name = "direccion") String direccion, @WebParam(name = "email") String email, @WebParam(name = "telefono") String telefono) {
+    @WebMethod(operationName = "eliminar")
+    public String eliminar(@WebParam(name = "tablas") final String tablas, @WebParam(name = "datos") final String datos) {
         //TODO write your implementation code here:
         return null;
     }
@@ -45,8 +49,8 @@ public class WSBD {
     /**
      * Web service operation
      */
-    @WebMethod(operationName = "Editar")
-    public String Editar(@WebParam(name = "id_proveedor") String id_proveedor, @WebParam(name = "nombre") String nombre, @WebParam(name = "direccion") String direccion, @WebParam(name = "email") String email, @WebParam(name = "telefono") String telefono) {
+    @WebMethod(operationName = "consultar")
+    public String consultar(@WebParam(name = "tablas") final String tablas, @WebParam(name = "datos") final String datos, @WebParam(name = "condicion") final String condicion) {
         //TODO write your implementation code here:
         return null;
     }
@@ -54,10 +58,11 @@ public class WSBD {
     /**
      * Web service operation
      */
-    @WebMethod(operationName = "Consulta")
-    public String Consulta() {
+    @WebMethod(operationName = "editar")
+    public String editar(@WebParam(name = "tablas") final String tablas, @WebParam(name = "datos") final String datos, @WebParam(name = "condicion") final String condicion) {
         //TODO write your implementation code here:
         return null;
     }
+
 
 }
