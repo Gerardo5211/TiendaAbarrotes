@@ -30,7 +30,7 @@ public class ControladorProveedores implements ActionListener{
     String leyenda="";
      
      if(e.getSource()==_product.btninsertarproductos){
-         leyenda=_model.alta("producto","null,'"+_product.txtnombreproducto.getText()+",'"+  _product.txtdescripcionproducto.getText()+"',"+
+         leyenda=_model.alta("productos","null,'"+_product.txtnombreproducto.getText()+",'"+  _product.txtdescripcionproducto.getText()+"',"+
                "',"+  _product.txtprecioproducto.getText()+",'");
                  
            
@@ -40,54 +40,62 @@ public class ControladorProveedores implements ActionListener{
      //agregar otros botones si se necesitan implementar
         
      }
+     
+     
+ //ELIMNAR     
+     if(e.getSource()==_product.btneliminarproductos){
+           
+     JOptionPane.showMessageDialog(null, leyenda);//Se manda mensaje con el resultado de la consulta de inserción
+     
+    limpiar();//se limpian las cajas de texto
+         leyenda = _model.eliminar("productos", "id ="+ _product.txtidproductos.getText());
+               
+          leyenda = administradorBD.borrarRegistro("productos", "id = 4");
+  //agregar otros botones si se necesitan implementar
+        
+    } ///MODFICAR
+//     
+     if(e.getSource()==_product.btneditarproductos){
+            leyenda = _model.modificar("productos", "null,'"+_product.txtidproductos.getText()+"' , nombre = '"+ _product.txtnombreproducto.getText()+"' ,  descripcion= '"+_product.txtdescripcionproducto.getText()+"' , precio='"+_product.txtprecioproducto.getText()+"'","precio= "+_product.txtprecioproducto.getText());
+            JOptionPane.showMessageDialog(null, leyenda);
+         
+        limpiar();//se limpian las cajas de texto
+     //agregar otros botones si se necesitan implementar
+        
+        }
+     
+     
+     //CONSULTAR
+      if(e.getSource()==_product.btnconsultarproductos){
+        
+          String[]datos = new String[0];
+          String consulta,info;
+          DefaultTableModel TablaProductos = new DefaultTableModel();
+          TablaProductos.addColumn("id_produtpos");
+          TablaProductos.addColumn("nombreProductos");
+          TablaProductos.addColumn("descripcion");
+          TablaProductos.addColumn("precio");
       
-//     if(e.getSource()==_view.btneliminarprovedor){
-//           
-//     JOptionPane.showMessageDialog(null, leyenda);//Se manda mensaje con el resultado de la consulta de inserción
-//     
-//     limpiar();//se limpian las cajas de texto
-//         leyenda = _model.eliminar("proveedores", "id ="+ _view.txtidproveedor.getText());
-//                 
-//          // leyenda = administradorBD.borrarRegistro("TbUsuarios", "id = 3");
-//     //agregar otros botones si se necesitan implementar
-//        
-//     }
-//     
-//     if(e.getSource()==_view.btneditarprovedor){
-//            leyenda = _model.modificar("proveedores", "id_proveedor='"+_view.txtidproveedor.getText()+"' , nombre = '"+ _view.txtnombreproveedor.getText()+"' ,  direccion= '"+_view.txtdireccionproveedores.getText()+"' , email='"+_view.txtgmailprovedores.getText()+"'", "telefono= "+_view.txttelefonoprovedores.getText());
-//            JOptionPane.showMessageDialog(null, leyenda);
-//         
-//        limpiar();//se limpian las cajas de texto
-//     //agregar otros botones si se necesitan implementar
-//        
-//        }
-//     
-//      if(e.getSource()==_view.btnconsultarproveedores){
-//        
-//          String[]datos = new String[0];
-//          String consulta,info;
-//          DefaultTableModel tabla2 = new DefaultTableModel();
-//          tabla2.addColumn("id_proveedor");
-//          tabla2.addColumn("nombre");
-//          tabla2.addColumn("direccion");
-//          tabla2.addColumn("email");
-//          tabla2.addColumn("telefono");
-//         
-//         
-//          
-//          _view.tabla.setModel(tabla2);
-//          
-//          int i,j;
-//          
-//          consulta = _model.Consultar("proveedores","nombre,direccion,email,telefono","id_Proveedor>=1");
-//          datos = consulta.split(",");
-//          
-//          for(i=0; i<datos.length;i++){
-//              System.out.println(datos[i]);
-//          }
-//      
-    // }
+         
+         
+          
+          _product.tabla.setModel(TablaProductos);
+          
+          int i,j;
+          
+          consulta = _model.Consultar("productos","nombreProductos,Descripción,precio","id_productos>=1");
+          datos = consulta.split(",");
+          
+          for(i=0; i<datos.length;i++){
+              System.out.println(datos[i]);
+          }
+      
+     }
     // poner tdododododododdo
+    
+    
+    
+    
     }
     
     public ControladorProveedores(Productos producto,ModeloUsuario model){

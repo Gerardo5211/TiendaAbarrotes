@@ -49,25 +49,38 @@ public class WSBD {
      * Web service operation
      */
     @WebMethod(operationName = "eliminar")
-    public String eliminar(@WebParam(name = "tablas") final String tablas, @WebParam(name = "datos") final String datos) {
+    public String eliminar(@WebParam(name = "tabla") final String tabla, @WebParam(name = "datos") final String datos) {
         //TODO write your implementation code here:
-        return null;
+        
+        
+        MDB administradorBD = new MDB();
+        String leyenda;
+        leyenda = administradorBD.borrarRegistro(tabla, datos);
+        
+        return  leyenda;
+        
     }
 
     /**
      * Web service operation
      */
     @WebMethod(operationName = "consultar")
-    public String consultar(@WebParam(name = "tablas") final String tablas, @WebParam(name = "datos") final String datos, @WebParam(name = "condicion") final String condicion) {
+    public String consultar(@WebParam(name = "tabla") final String tabla, @WebParam(name = "datos") final String datos, @WebParam(name = "condicion") final String condicion) {
         //TODO write your implementation code here:
-        return null;
+        
+        
+         MDB administradorBD = new MDB();
+        String leyenda;
+        leyenda = administradorBD.borrarRegistro(tabla, datos);
+        return  leyenda;
+        
     }
 
     /**
      * Web service operation
      */
     @WebMethod(operationName = "editar")
-    public String editar(@WebParam(name = "tablas") final String tablas, @WebParam(name = "datos") final String datos, @WebParam(name = "condicion") final String condicion) {
+    public String editar(@WebParam(name = "tabla") final String tabla, @WebParam(name = "datos") final String datos, @WebParam(name = "condicion") final String condicion) {
         //TODO write your implementation code here:
         return null;
     }
