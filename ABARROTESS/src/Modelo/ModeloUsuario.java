@@ -25,7 +25,7 @@ public class ModeloUsuario {
     public String alta (String tabla , String datos){
   
         leyenda=obj2.altas(tabla,datos);
-        return leyenda;
+       return leyenda;
     } 
     
     public String eliminar (String tabla , String datos){
@@ -48,6 +48,10 @@ public class ModeloUsuario {
         leyenda=obj2.consultar(tabla, datos,condicion);
         return leyenda;
     } 
+
+    public String editar(String productos, String string, String string0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     } 

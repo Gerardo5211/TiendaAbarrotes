@@ -12,7 +12,7 @@ public class MDB {
 	protected Conexion conexion;
 
         public MDB() {
-          conexion = new Conexion("com.mysql.jdbc.Driver",  "jdbc:mysql://localhost/bdabarrotes", "grupo","123456789");//CAMBIAR BDCOSTOS POR EL NOMBRE DE SU BD
+          conexion = new Conexion("com.mysql.jdbc.Driver",  "jdbc:mysql://localhost/bdabarrotes", "grupo","12345");//CAMBIAR BDCOSTOS POR EL NOMBRE DE SU BD
 	
       //  conexion = new Conexion("com.mysql.jdbc.Driver",  "jdbc:mysql://localhost:3306/bdcostos?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&useTimezone=true&serverTimezone=GMT&useSSL=false", "root","administrador");//ESTA CADENA LARGA SE USA PARA MAC Y PARA ALGUNAS INSTALACIONES RECIENTES DE MYSQL
 	

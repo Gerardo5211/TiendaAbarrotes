@@ -1,10 +1,11 @@
 
-package controlador;
+package Controlador;
 
 
 import Modelo.ModeloUsuario;
 import Vistas.Proveedores;
-import Vistas.Productos;
+
+
 
 
 import java.awt.event.ActionEvent;
@@ -19,102 +20,50 @@ import javax.swing.table.DefaultTableModel;
 public class ControladorProveedores implements ActionListener{
     
    // private Proveedores _view;
-    private Productos _product;
-    private ModeloUsuario _model;
+    private Proveedores _proved;
+    private ModeloUsuario _model2;
     
-    
-    @Override
+     @Override
     public void actionPerformed(ActionEvent e) {
-    //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     String leyenda="";
      
-     if(e.getSource()==_product.btninsertarproductos){
-         leyenda=_model.alta("productos","null,'"+_product.txtnombreproducto.getText()+",'"+  _product.txtdescripcionproducto.getText()+"',"+
-               "',"+  _product.txtprecioproducto.getText()+",'");
-                 
-           
-     JOptionPane.showMessageDialog(null, leyenda);//Se manda mensaje con el resultado de la consulta de inserción
-     
-     limpiar();//se limpian las cajas de texto
-     //agregar otros botones si se necesitan implementar
-        
-     }
-     
-     
- //ELIMNAR     
-     if(e.getSource()==_product.btneliminarproductos){
-           
-     JOptionPane.showMessageDialog(null, leyenda);//Se manda mensaje con el resultado de la consulta de inserción
-     
-    limpiar();//se limpian las cajas de texto
-         leyenda = _model.eliminar("productos", "id ="+ _product.txtidproductos.getText());
-               
-          leyenda = administradorBD.borrarRegistro("productos", "id = 4");
-  //agregar otros botones si se necesitan implementar
-        
-    } ///MODFICAR
-//     
-     if(e.getSource()==_product.btneditarproductos){
-            leyenda = _model.modificar("productos", "null,'"+_product.txtidproductos.getText()+"' , nombre = '"+ _product.txtnombreproducto.getText()+"' ,  descripcion= '"+_product.txtdescripcionproducto.getText()+"' , precio='"+_product.txtprecioproducto.getText()+"'","precio= "+_product.txtprecioproducto.getText());
-            JOptionPane.showMessageDialog(null, leyenda);
-         
+     if(e.getSource()==_proved.btninsertarproveedores){
+         leyenda=_model2.alta("proveedores","null,'"+_proved.txtnombreproveedor.getText()+"','"+_proved.txtdireccionproveedores.getText()+"','"+_proved.txtgmailprovedores.getText()+"'"+_proved.txttelefonoprovedores.getText()+"'");
+         JOptionPane.showMessageDialog(null, leyenda);//Se manda mensaje con el resultado de la consulta de inserción
         limpiar();//se limpian las cajas de texto
-     //agregar otros botones si se necesitan implementar
-        
+         
+         }
+    
+     if(e.getSource()==_proved.btneditarprovedor){
+            leyenda = _model2.editar("proveedores", "nombre='"+_proved.txtnombreproveedor.getText()+"' , direcion = '"+_proved.txtdireccionproveedores.getText()+"', email = '"+_proved.txtgmailprovedores.getText()+"' , telefono= '"+_proved.txttelefonoprovedores, "idProducto = "+_proved.txtidproveedor.getText());
+            JOptionPane.showMessageDialog(null, leyenda);
+            limpiar();
         }
-     
-     
-     //CONSULTAR
-      if(e.getSource()==_product.btnconsultarproductos){
-        
-          String[]datos = new String[0];
-          String consulta,info;
-          DefaultTableModel TablaProductos = new DefaultTableModel();
-          TablaProductos.addColumn("id_produtpos");
-          TablaProductos.addColumn("nombreProductos");
-          TablaProductos.addColumn("descripcion");
-          TablaProductos.addColumn("precio");
-      
-         
-         
-          
-          _product.tabla.setModel(TablaProductos);
-          
-          int i,j;
-          
-          consulta = _model.Consultar("productos","nombreProductos,Descripción,precio","id_productos>=1");
-          datos = consulta.split(",");
-          
-          for(i=0; i<datos.length;i++){
-              System.out.println(datos[i]);
-          }
-      
-     }
-    // poner tdododododododdo
-    
-    
-    
-    
     }
-    
-    public ControladorProveedores(Productos producto,ModeloUsuario model){
-        this._model=model;
-        this._product=producto;
-        
-        this._product.btninsertarproductos.addActionListener(this);
-    }
-    
     
     public void iniciar(){
-        _product.setTitle("MVC_Visual");
+        _proved.setTitle("MVC_Visual");
     }
-    
-    public void limpiar(){
-        _product.txtnombreproducto.setText(null);
-        _product.txtdescripcionproducto.setText(null);
-        _product.txtprecioproducto.setText(null);
+    public  ControladorProveedores(Proveedores provedores,ModeloUsuario model){
+        this._model2=model;
+        this._proved=provedores;
+        this._proved.btninsertarproveedores.addActionListener(this);
+        this._proved.btneditarprovedor.addActionListener(this);
+    }
+        public void limpiar(){
+        _proved.txtidproveedor.setText(null);  
+        _proved.txtnombreproveedor.setText(null);
+        _proved.txtdireccionproveedores.setText(null);
+        _proved.txtgmailprovedores.setText(null);
+        _proved.txtgmailprovedores.setText(null);
        
+        
     }
-    
-    }
+
+}
+        
+        
+        
+        
+        

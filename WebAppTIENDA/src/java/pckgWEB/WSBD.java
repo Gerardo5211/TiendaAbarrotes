@@ -29,21 +29,6 @@ public class WSBD {
 
 
 
-    /**
-     * Web service operation
-     */
-    @WebMethod(operationName = "Altas")
-    public String Altas(@WebParam(name = "tabla") final String tabla, @WebParam(name = "datos") final String datos) {
-        //TODO write your implementation code here:
-        
-        
-        MDB administradorBD = new MDB();
-        String leyenda;
-        leyenda = administradorBD.registrarAlta(tabla, datos);
-        
-        return  leyenda;
-        
-    }
 
     /**
      * Web service operation
@@ -84,6 +69,17 @@ public class WSBD {
         //TODO write your implementation code here:
         return null;
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "alta")
+    public String alta(@WebParam(name = "tabla") final String tabla, @WebParam(name = "datos") final String datos) {
+        //TODO write your implementation code here:
+        return null;
+    }
+
+
 
 
 }

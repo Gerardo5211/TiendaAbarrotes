@@ -1,8 +1,7 @@
 package ABARROTES;
 
-import controlador.ControladorProveedores;
+import Controlador.ControladorProductos;
 import Vistas.Productos;
-import Vistas.Proveedores;
 import Modelo.ModeloUsuario;
 
 
@@ -18,8 +17,8 @@ public class abarrotes{
         ModeloUsuario objM = new ModeloUsuario();
         //abarrotes objM = new abarrotes();
         objV.setVisible(true);
-     
-        ControladorProveedores objC = new ControladorProveedores(objV,objM);
+        
+        ControladorProductos objC = new ControladorProductos(objV,objM);
         
     }
     
